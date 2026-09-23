@@ -94,7 +94,7 @@
             data.forEach(emp => {
                 const nickname = emp['ชื่อเล่น'] || '-';
                 const tNamekey = emp['T-namekey'] || '-';
-                const namekey = emp['namekey'] || '-';
+                const namekey = emp['NAMEKEY'] || '-';
                 const gp = emp['Function_Group_Name'] || '-';
                 const product = emp['Product'] || '-';
                 const email = emp['Email_Address_Business_Email_Information'] || '-';
@@ -149,12 +149,12 @@
             const filtered = employeeData.filter(emp => {
                 const nickname = (emp['ชื่อเล่น'] || '').toLowerCase();
                 const tNamekey = (emp['T-namekey'] || '').toLowerCase();
-                const namekey = (emp['namekey'] || '').toLowerCase();
+                const namekey = (emp['NAMEKEY'] || '').toLowerCase();
                 const gp = (emp['Function_Group_Name'] || '').toLowerCase();
 
                 return nickname.includes(query) ||
                        tNamekey.includes(query) ||
-                       namekey.includes(query) ||
+                       NAMEKEY.includes(query) ||
                        gp.includes(query);
             });
 
